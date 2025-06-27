@@ -152,5 +152,5 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel logo;
     private javax.swing.JPanel underground;
     private javax.swing.JTextField usuario_input;
-    // End of variables declaration//GEN-END:variables
-}
+    // End of variables declaration//GEN-END:variables 
+} 
