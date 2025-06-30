@@ -126,7 +126,7 @@ public class login extends javax.swing.JFrame {
         System.out.println(usuario);
         jLabel1.setText("Hola cambie gracias al boton");
         contrasena_input.setBackground(Color.red);
-        
+        System.out.println("Holis");
         principal MiPrincipal = new principal();
         MiPrincipal.setVisible(true);
         dispose();
