@@ -36,6 +36,7 @@ public class login extends javax.swing.JFrame {
         Iniciar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        forget_password = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -44,7 +45,7 @@ public class login extends javax.swing.JFrame {
         underground.setBackground(new java.awt.Color(237, 233, 227));
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Usuario");
+        jLabel1.setText("User Name");
 
         usuario_input.setBackground(new java.awt.Color(157, 159, 137));
         usuario_input.addActionListener(new java.awt.event.ActionListener() {
@@ -54,15 +55,20 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Contraseña");
+        jLabel2.setText("Password");
 
         contrasena_input.setBackground(new java.awt.Color(157, 159, 137));
 
         Iniciar.setBackground(new java.awt.Color(157, 159, 137));
-        Iniciar.setText("Iniciar Sesión");
+        Iniciar.setText("Sign Up");
         Iniciar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 IniciarMouseClicked(evt);
+            }
+        });
+        Iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarActionPerformed(evt);
             }
         });
 
@@ -74,6 +80,15 @@ public class login extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("\"Entrega Verde Futuro Brillante\"");
 
+        forget_password.setBackground(new java.awt.Color(237, 233, 227));
+        forget_password.setForeground(new java.awt.Color(0, 0, 0));
+        forget_password.setText("Forget Password?");
+        forget_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forget_passwordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout undergroundLayout = new javax.swing.GroupLayout(underground);
         underground.setLayout(undergroundLayout);
         undergroundLayout.setHorizontalGroup(
@@ -81,25 +96,21 @@ public class login extends javax.swing.JFrame {
             .addGroup(undergroundLayout.createSequentialGroup()
                 .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(293, 293, 293)
-                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(undergroundLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel2))))
-                    .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(jLabel3))
                     .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(Iniciar))
-                    .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(309, 309, 309)
-                        .addComponent(jLabel1))
-                    .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(forget_password)
+                            .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1)
+                                .addComponent(usuario_input, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel2)
+                                .addComponent(contrasena_input, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Iniciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)))))
                 .addContainerGap(256, Short.MAX_VALUE))
         );
         undergroundLayout.setVerticalGroup(
@@ -109,7 +120,7 @@ public class login extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -117,9 +128,11 @@ public class login extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
                 .addComponent(Iniciar)
-                .addGap(52, 52, 52))
+                .addGap(18, 18, 18)
+                .addComponent(forget_password)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -161,6 +174,14 @@ public class login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_usuario_inputActionPerformed
 
+    private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IniciarActionPerformed
+
+    private void forget_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forget_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_forget_passwordActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -168,6 +189,7 @@ public class login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Iniciar;
     private javax.swing.JTextField contrasena_input;
+    private javax.swing.JButton forget_password;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
