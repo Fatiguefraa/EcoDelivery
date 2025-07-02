@@ -34,6 +34,8 @@ public class login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         contrasena_input = new javax.swing.JTextField();
         Iniciar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -64,43 +66,60 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(166, 166, 166));
+        jLabel3.setText("EcoDelivery");
+
+        jLabel4.setFont(new java.awt.Font("Californian FB", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("\"Entrega Verde Futuro Brillante\"");
+
         javax.swing.GroupLayout undergroundLayout = new javax.swing.GroupLayout(underground);
         underground.setLayout(undergroundLayout);
         undergroundLayout.setHorizontalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(undergroundLayout.createSequentialGroup()
                 .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(293, 293, 293)
                         .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(undergroundLayout.createSequentialGroup()
-                                .addGap(293, 293, 293)
-                                .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(undergroundLayout.createSequentialGroup()
-                                .addGap(301, 301, 301)
+                                .addGap(6, 6, 6)
                                 .addComponent(jLabel2))))
                     .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(280, 280, 280)
+                        .addGap(271, 271, 271)
+                        .addComponent(jLabel3))
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(282, 282, 282)
                         .addComponent(Iniciar))
                     .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(311, 311, 311)
-                        .addComponent(jLabel1)))
-                .addContainerGap(317, Short.MAX_VALUE))
+                        .addGap(309, 309, 309)
+                        .addComponent(jLabel1))
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(242, 242, 242)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(256, Short.MAX_VALUE))
         );
         undergroundLayout.setVerticalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(undergroundLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(36, 36, 36)
                 .addComponent(Iniciar)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,9 +130,9 @@ public class login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(underground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(underground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -126,7 +145,9 @@ public class login extends javax.swing.JFrame {
         System.out.println(usuario);
         jLabel1.setText("Hola cambie gracias al boton");
         contrasena_input.setBackground(Color.red);
-        System.out.println("Holis");
+        System.out.println("Entre al botón");
+        String contrasena=contrasena_input.getText();
+        System.out.println(contrasena);
         principal MiPrincipal = new principal();
         MiPrincipal.setVisible(true);
         dispose();
@@ -137,9 +158,7 @@ public class login extends javax.swing.JFrame {
 
     private void usuario_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuario_inputActionPerformed
         // TODO add your handling code here:
-        System.out.println("Entre al botón");
-        String contrasena=contrasena_input.getText();
-        System.out.println(contrasena);
+        
     }//GEN-LAST:event_usuario_inputActionPerformed
 
     /**
@@ -151,6 +170,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JTextField contrasena_input;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel underground;
     private javax.swing.JTextField usuario_input;
     // End of variables declaration//GEN-END:variables
