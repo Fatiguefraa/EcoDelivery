@@ -17,6 +17,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
+        System.out.println("holis");
     }
 
     /**
@@ -186,7 +187,7 @@ public class login extends javax.swing.JFrame {
      * @param args the command line arguments
      */
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton Iniciar;
     private javax.swing.JTextField contrasena_input;
     private javax.swing.JButton forget_password;
@@ -196,5 +197,5 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel underground;
     private javax.swing.JTextField usuario_input;
-    // End of variables declaration//GEN-END:variables 
-} 
+    // End of variables declaration                    
+}
