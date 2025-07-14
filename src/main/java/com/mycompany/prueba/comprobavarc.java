@@ -8,7 +8,7 @@ package com.mycompany.prueba;
  *
  * @author Ramon
  */
-public class comprobavarc {
+/*public class comprobavarc {
     public class ComprobarVarC {
 
     // Array con 5 contraseñas válidas

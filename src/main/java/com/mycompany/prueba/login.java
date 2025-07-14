@@ -162,14 +162,27 @@ public class login extends javax.swing.JFrame {
         System.out.println("Entre al botón");
         String contrasena=contrasena_input.getText();
         System.out.println(contrasena);
-        principal MiPrincipal = new principal();
-        MiPrincipal.setVisible(true);
-        dispose();
+        
+        LoginSistema login = new LoginSistema();
+
+        // Prueba de verificación
+
+        if (login.verificarAcceso(usuario, contrasena)) {
+            System.out.println("✅ Acceso concedido.");
+            principal MiPrincipal = new principal();
+            MiPrincipal.setVisible(true);
+            dispose();
+        } else {
+            System.out.println("❌ Usuario o contraseña incorrectos.");
+        }
         
         
               
     }//GEN-LAST:event_IniciarMouseClicked
-
+private void forget_passwordMouseClicked(java.awt.event.MouseEvent evt) { 
+       principal MiPrincipal = new principal();
+       MiPrincipal.setVisible(true);
+}
     private void usuario_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuario_inputActionPerformed
         // TODO add your handling code here:
         
