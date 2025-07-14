@@ -73,6 +73,8 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(153, 153, 0));
         jTextField1.setText("Name");
 
         jTextField4.setText("E-mail");
