@@ -154,6 +154,7 @@ public class login extends javax.swing.JFrame {
 
     private void IniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarMouseClicked
         // TODO add your handling code here:
+        var usuarios=peticiones1.obtenerUsuarios();
         System.out.println("Entre al botón");
         String usuario=usuario_input.getText();
         System.out.println(usuario);
