@@ -87,6 +87,11 @@ public class provedor extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(204, 255, 204));
         jButton5.setForeground(new java.awt.Color(0, 0, 255));
         jButton5.setText("Locación ");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -153,19 +158,152 @@ public class provedor extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    String proveedorID = txtProveedorID.getText(); // ID del proveedor
+
+    if (proveedorID.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Por favor ingresa el ID del proveedor.");
+        return;
+    }
+
+    DefaultTableModel modelo = (DefaultTableModel) tablaReseñas.getModel();
+    modelo.setRowCount(0); // Limpiar la tabla
+
+    Connection con = ConexionBD.conectar();
+    String sql = "SELECT mensaje, calificacion, fecha FROM reseñas WHERE id_proveedor = ?";
+
+    try {
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, proveedorID);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            String mensaje = rs.getString("mensaje");
+            int calificacion = rs.getInt("calificacion");
+            String fecha = rs.getString("fecha");
+
+            modelo.addRow(new Object[]{mensaje, calificacion, fecha});
+        }
+
+        con.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error al cargar reseñas: " + e.getMessage());
+    }
+}
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+// TODO add your handling code here:
+private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    String proveedorID = txtProveedorID.getText(); // Campo de texto con el ID del proveedor
+
+    if (proveedorID.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Debes ingresar el ID del proveedor.");
+        return;
+    }
+
+    DefaultTableModel modelo = (DefaultTableModel) tablaNotificaciones.getModel();
+    modelo.setRowCount(0); // Limpia la tabla
+
+    Connection con = ConexionBD.conectar();
+    String sql = "SELECT mensaje FROM notificaciones WHERE id_proveedor = ?";
+
+    try {
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, proveedorID);
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            String mensaje = rs.getString("mensaje");
+            modelo.addRow(new Object[]{mensaje});
+        }
+
+        con.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error al cargar notificaciones: " + e.getMessage());
+    }
+}
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    // Mostrar mensaje de confirmación
+    int confirmacion = JOptionPane.showConfirmDialog(this, "¿Seguro que quieres cerrar sesión?", "Cerrar sesión", JOptionPane.YES_NO_OPTION);
+    
+    if (confirmacion == JOptionPane.YES_OPTION) {
+        // Cerrar la ventana actual
+        this.dispose();
+
+        // Redirigir a la ventana de login del proveedor
+        LoginProveedor login = new LoginProveedor();
+        login.setVisible(true);
+    }
+}
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) tablaPedidos.getModel();
+modelo.setRowCount(0); // limpia la tabla
+
+Connection con = ConexionBD.conectar();
+String sql = "SELECT nombre_cliente, direccion, descripcion FROM pedidos WHERE estado = 'pendiente'";
+
+try {
+    PreparedStatement ps = con.prepareStatement(sql);
+    ResultSet rs = ps.executeQuery();
+
+    while (rs.next()) {
+        String nombre = rs.getString("nombre_cliente");
+        String direccion = rs.getString("direccion");
+        String descripcion = rs.getString("descripcion");
+        modelo.addRow(new Object[]{nombre, direccion, descripcion});
+    }
+    con.close();
+} catch (SQLException e) {
+    JOptionPane.showMessageDialog(null, "Error al obtener pedidos: " + e.getMessage());
+}
+
+    
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+    String ubicacion = txtUbicacion.getText(); // Campo de texto donde el proveedor escribe su ubicación
+    String proveedorID = txtProveedorID.getText(); // El ID del proveedor para identificarlo en la BD
+
+    if (ubicacion.isEmpty() || proveedorID.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Por favor completa la ubicación y el ID del proveedor.");
+        return;
+    }
+
+    Connection con = ConexionBD.conectar();
+    String sql = "UPDATE proveedores SET ubicacion = ? WHERE id_proveedor = ?";
+
+    try {
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, ubicacion);
+        ps.setString(2, proveedorID);
+
+        int filasActualizadas = ps.executeUpdate();
+        if (filasActualizadas > 0) {
+            JOptionPane.showMessageDialog(null, "¡Ubicación actualizada correctamente!");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se encontró el proveedor.");
+        }
+
+        con.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Error al actualizar ubicación: " + e.getMessage());
+    }
+}
+
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
