@@ -10,13 +10,14 @@ import java.awt.Color;
  *
  * @author guefr
  */
-public class login extends javax.swing.JFrame {
+public class login1 extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public login() {
+    public login1() {
         initComponents();
+        System.out.println("holis");
     }
 
     /**
@@ -48,11 +49,6 @@ public class login extends javax.swing.JFrame {
         jLabel1.setText("User Name");
 
         usuario_input.setBackground(new java.awt.Color(157, 159, 137));
-        usuario_input.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                usuario_inputMouseClicked(evt);
-            }
-        });
         usuario_input.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuario_inputActionPerformed(evt);
@@ -88,11 +84,6 @@ public class login extends javax.swing.JFrame {
         forget_password.setBackground(new java.awt.Color(237, 233, 227));
         forget_password.setForeground(new java.awt.Color(0, 0, 0));
         forget_password.setText("Forget Password?");
-        forget_password.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                forget_passwordMouseClicked(evt);
-            }
-        });
         forget_password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 forget_passwordActionPerformed(evt);
@@ -104,30 +95,24 @@ public class login extends javax.swing.JFrame {
         undergroundLayout.setHorizontalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(undergroundLayout.createSequentialGroup()
-                .addGap(274, 274, 274)
-                .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addContainerGap(363, Short.MAX_VALUE))
-                    .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(undergroundLayout.createSequentialGroup()
                 .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(jLabel3))
                     .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(forget_password)
+                            .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1)
+                                .addComponent(usuario_input, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel2)
+                                .addComponent(contrasena_input, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Iniciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)))))
                 .addContainerGap(256, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, undergroundLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(forget_password)
-                .addGap(308, 308, 308))
         );
         undergroundLayout.setVerticalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,9 +131,9 @@ public class login extends javax.swing.JFrame {
                 .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Iniciar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(forget_password)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,7 +153,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void IniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarMouseClicked
-         // TODO add your handling code here:
+        // TODO add your handling code here:
         var usuarios=peticiones1.obtenerUsuarios();
         System.out.println("Entre al botón");
         String usuario=usuario_input.getText();
@@ -195,7 +180,10 @@ public class login extends javax.swing.JFrame {
         
               
     }//GEN-LAST:event_IniciarMouseClicked
-
+private void forget_passwordMouseClicked(java.awt.event.MouseEvent evt) { 
+       principal MiPrincipal = new principal();
+       MiPrincipal.setVisible(true);
+}
     private void usuario_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuario_inputActionPerformed
         // TODO add your handling code here:
         
@@ -209,22 +197,11 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_forget_passwordActionPerformed
 
-    private void usuario_inputMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuario_inputMouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_usuario_inputMouseClicked
-
-    private void forget_passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forget_passwordMouseClicked
-        // TODO add your handling code here:
-        siginup MiPrincipal = new siginup();
-       MiPrincipal.setVisible(true);
-    }//GEN-LAST:event_forget_passwordMouseClicked
-
     /**
      * @param args the command line arguments
      */
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton Iniciar;
     private javax.swing.JTextField contrasena_input;
     private javax.swing.JButton forget_password;
@@ -234,5 +211,5 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel underground;
     private javax.swing.JTextField usuario_input;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                    
 }
