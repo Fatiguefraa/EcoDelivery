@@ -53,7 +53,7 @@ public class peticiones1 {
 
     if (conn != null) {
         
-        String query = "INSERT INTO usuarios (nombre_completo, rol, curp, correo, password) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO usuarios2 (nombre, correo, contraseña, tipo_usuario, telefono) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, nombre);

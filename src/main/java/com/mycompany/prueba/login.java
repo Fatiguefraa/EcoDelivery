@@ -88,6 +88,11 @@ public class login extends javax.swing.JFrame {
         forget_password.setBackground(new java.awt.Color(237, 233, 227));
         forget_password.setForeground(new java.awt.Color(0, 0, 0));
         forget_password.setText("Forget Password?");
+        forget_password.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                forget_passwordMouseClicked(evt);
+            }
+        });
         forget_password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 forget_passwordActionPerformed(evt);
@@ -99,25 +104,30 @@ public class login extends javax.swing.JFrame {
         undergroundLayout.setHorizontalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(undergroundLayout.createSequentialGroup()
+                .addGap(274, 274, 274)
+                .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(undergroundLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addContainerGap(363, Short.MAX_VALUE))
+                    .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(undergroundLayout.createSequentialGroup()
                 .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(271, 271, 271)
                         .addComponent(jLabel3))
                     .addGroup(undergroundLayout.createSequentialGroup()
                         .addGap(242, 242, 242)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(undergroundLayout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usuario_input, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(forget_password)
-                                .addGroup(undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(contrasena_input, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Iniciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE))))))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(256, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, undergroundLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(forget_password)
+                .addGap(308, 308, 308))
         );
         undergroundLayout.setVerticalGroup(
             undergroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +146,9 @@ public class login extends javax.swing.JFrame {
                 .addComponent(contrasena_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Iniciar)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(forget_password)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -203,6 +213,12 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_usuario_inputMouseClicked
+
+    private void forget_passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forget_passwordMouseClicked
+        // TODO add your handling code here:
+        siginup MiPrincipal = new siginup();
+       MiPrincipal.setVisible(true);
+    }//GEN-LAST:event_forget_passwordMouseClicked
 
     /**
      * @param args the command line arguments
