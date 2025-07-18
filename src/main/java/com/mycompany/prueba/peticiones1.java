@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.prueba;
 
 /**
@@ -26,19 +22,19 @@ public class peticiones1 {
         Connection conn=DB.conectar();
         
         if(conn != null){
-            String query="SELECT * FROM usuarios";
+            String query="SELECT * FROM usuarios2";
             
             try(Statement stmt=conn.createStatement();
                 ResultSet rs= stmt.executeQuery(query)){
                 
                while(rs.next()){
                    Object[] fila = new Object[] {
-                        rs.getInt("id"),
-                        rs.getString("nombre_completo"),
-                        rs.getString("rol"),
-                        rs.getString("curp"),
+                        rs.getInt("id_usuario"),
+                        rs.getString("nombre"),
                         rs.getString("correo"),
-                        rs.getString("password")
+                        rs.getString("contraseña"),
+                        rs.getString("tipo_usuario"),
+                        rs.getString("telefono")
                     };
                     usuarios.add(fila);
                }    
@@ -51,7 +47,7 @@ public class peticiones1 {
     }
     
     //Otra peticion
-    public static boolean insertarUsuario(String nombreCompleto, String rol, String curp, String correo, String password) {
+    public static boolean insertarUsuario(String nombre, String correo, String contraseña, String tipo_usuario, String telefono) {
     
     Connection conn = DB.conectar();
 
@@ -60,11 +56,11 @@ public class peticiones1 {
         String query = "INSERT INTO usuarios (nombre_completo, rol, curp, correo, password) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, nombreCompleto);
-            stmt.setString(2, rol);
-            stmt.setString(3, curp);
-            stmt.setString(4, correo);
-            stmt.setString(5, password);
+            stmt.setString(1, nombre);
+            stmt.setString(2, correo);
+            stmt.setString(3, contraseña);
+            stmt.setString(4, tipo_usuario);
+            stmt.setString(5, telefono);
 
             int filasAfectadas = stmt.executeUpdate();
 
