@@ -8,18 +8,23 @@ package com.mycompany.prueba;
  *
  * @author Ramon
  */
-public class LoginSistema {
-    // Arrays de usuarios y contraseñas
-    private String[] usuarios = {"alberto", "maria", "juan", "lucia"};
-    private String[] contrasenas = {"1234", "pass123", "qwerty", "lucia2025"};
+import java.util.List;
 
-    // Método para verificar usuario y contraseña
-    public boolean verificarAcceso(String usuarioIngresado, String contrasenaIngresada) {
-        for (int i = 0; i < usuarios.length; i++) {
-            if (usuarios[i].equals(usuarioIngresado) && contrasenas[i].equals(contrasenaIngresada)) {
+public class LoginSistema {
+
+    // Método para verificar usuario y contraseña desde la base de datos
+    public boolean verificarAcceso(String nombre, String contrasena) {
+        List<Object[]> usuarios = peticiones1.obtenerUsuarios();
+
+        for (Object[] usuario : usuarios) {
+            String nombreUsuario = (String) usuario[1];     // columna 1 = nombre
+            String password = (String) usuario[3];          // columna 3 = contraseña
+
+            if (nombreUsuario.equals(nombre) && password.equals(contrasena)) {
                 return true;
             }
         }
+
         return false;
     }
 }
