@@ -216,8 +216,9 @@ public class login extends javax.swing.JFrame {
 
     private void forget_passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forget_passwordMouseClicked
         // TODO add your handling code here:
-        siginup MiPrincipal = new siginup();
+       siginup MiPrincipal = new siginup();
        MiPrincipal.setVisible(true);
+       MapaEmergencia.mostrarRuta("-34.6037,-58.3816", "-34.5736,-58.4223", "bicicleta");  
     }//GEN-LAST:event_forget_passwordMouseClicked
 
     /**
