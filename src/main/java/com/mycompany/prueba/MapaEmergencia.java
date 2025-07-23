@@ -20,7 +20,7 @@ public class MapaEmergencia {
             String destinoCod = URLEncoder.encode(destino, "UTF-8");
             
             String url = String.format(
-                "https://www.openstreetmap.org/directions?engine=fossgis_osrm_%s&route=%s%%2C%s%%3B%s%%2C%s",
+                "www.openstreetmap.org/directions?engine=fossgis_osrm_%s&route=%s,%s;%s,%s",
                 modo.equals("bicicleta") ? "bike" : "car",
                 origen.split(",")[0].trim(), origen.split(",")[1].trim(),
                 destino.split(",")[0].trim(), destino.split(",")[1].trim()
@@ -48,7 +48,7 @@ public class MapaEmergencia {
 
     public static String generarEnlace(String origen, String destino, String modo) {
         return String.format(
-            "https://www.openstreetmap.org/directions?engine=fossgis_osrm_%s&route=%s%%2C%s%%3B%s%%2C%s",
+            "www.openstreetmap.org/directions?engine=fossgis_osrm_%s&route=%s,%s;%s,%s",
             modo.equals("bicicleta") ? "bike" : "car",
             origen.split(",")[0].trim(), origen.split(",")[1].trim(),
             destino.split(",")[0].trim(), destino.split(",")[1].trim()
