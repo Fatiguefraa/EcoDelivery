@@ -26,7 +26,7 @@ public class provedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -37,116 +37,107 @@ public class provedor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(93, 111, 78));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel3.setBackground(new java.awt.Color(244, 235, 229));
+        jPanel3.setForeground(new java.awt.Color(0, 0, 204));
 
-        jTextField1.setBackground(new java.awt.Color(204, 255, 204));
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(0, 0, 255));
-        jTextField1.setText("Perfil de provedor ");
+        jTextField1.setText("CUENTA DE PROVEDOR ");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setForeground(new java.awt.Color(0, 0, 255));
-        jButton1.setText("Reseñas");
+        jButton1.setBackground(new java.awt.Color(210, 228, 200));
+        jButton1.setForeground(new java.awt.Color(0, 0, 204));
+        jButton1.setText("Notificaciones ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 255, 204));
-        jButton2.setForeground(new java.awt.Color(0, 0, 255));
-        jButton2.setText("Notificaciones ");
+        jButton2.setBackground(new java.awt.Color(210, 228, 200));
+        jButton2.setForeground(new java.awt.Color(0, 0, 204));
+        jButton2.setText("Locación");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 255, 204));
-        jButton3.setForeground(new java.awt.Color(0, 0, 255));
-        jButton3.setText("Cerrar Sesión");
+        jButton3.setBackground(new java.awt.Color(210, 228, 200));
+        jButton3.setForeground(new java.awt.Color(0, 0, 153));
+        jButton3.setText("Reseñas");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(204, 255, 204));
-        jButton4.setForeground(new java.awt.Color(0, 0, 255));
-        jButton4.setText("Pedidos Pendientes ");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
+        jButton4.setBackground(new java.awt.Color(210, 228, 200));
+        jButton4.setForeground(new java.awt.Color(0, 0, 153));
+        jButton4.setText("Pedidos pendientes ");
 
-        jButton5.setBackground(new java.awt.Color(204, 255, 204));
+        jButton5.setBackground(new java.awt.Color(210, 228, 200));
         jButton5.setForeground(new java.awt.Color(0, 0, 255));
-        jButton5.setText("Locación ");
+        jButton5.setText("Cerrar sesión ");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(235, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(25, 25, 25))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(238, 238, 238)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addGap(27, 27, 27))
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -156,154 +147,32 @@ public class provedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    String proveedorID = txtProveedorID.getText(); // ID del proveedor
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    if (proveedorID.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Por favor ingresa el ID del proveedor.");
-        return;
-    }
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-    DefaultTableModel modelo = (DefaultTableModel) tablaReseñas.getModel();
-    modelo.setRowCount(0); // Limpiar la tabla
-
-    Connection con = ConexionBD.conectar();
-    String sql = "SELECT mensaje, calificacion, fecha FROM reseñas WHERE id_proveedor = ?";
-
-    try {
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, proveedorID);
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            String mensaje = rs.getString("mensaje");
-            int calificacion = rs.getInt("calificacion");
-            String fecha = rs.getString("fecha");
-
-            modelo.addRow(new Object[]{mensaje, calificacion, fecha});
-        }
-
-        con.close();
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Error al cargar reseñas: " + e.getMessage());
-    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Importar la clase
+ Acciones_proveedores acciones = new Acciones_proveedores();
+    acciones.obtenerNotificaciones(idUsuario);
 }
+
+// TODO add your handling code here:
+                                                        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-// TODO add your handling code here:
-private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    String proveedorID = txtProveedorID.getText(); // Campo de texto con el ID del proveedor
-
-    if (proveedorID.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Debes ingresar el ID del proveedor.");
-        return;
-    }
-
-    DefaultTableModel modelo = (DefaultTableModel) tablaNotificaciones.getModel();
-    modelo.setRowCount(0); // Limpia la tabla
-
-    Connection con = ConexionBD.conectar();
-    String sql = "SELECT mensaje FROM notificaciones WHERE id_proveedor = ?";
-
-    try {
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, proveedorID);
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            String mensaje = rs.getString("mensaje");
-            modelo.addRow(new Object[]{mensaje});
-        }
-
-        con.close();
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Error al cargar notificaciones: " + e.getMessage());
-    }
+    Acciones_proveedores acciones = new Acciones_proveedores();
+    String nuevaLocacion = txtLocacion.getText(); // asegúrate de tener este JTextField
+    acciones.actualizarLocacion(nuevaLocacion, idUsuario);
 }
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    // Mostrar mensaje de confirmación
-    int confirmacion = JOptionPane.showConfirmDialog(this, "¿Seguro que quieres cerrar sesión?", "Cerrar sesión", JOptionPane.YES_NO_OPTION);
-    
-    if (confirmacion == JOptionPane.YES_OPTION) {
-        // Cerrar la ventana actual
-        this.dispose();
-
-        // Redirigir a la ventana de login del proveedor
-        LoginProveedor login = new LoginProveedor();
-        login.setVisible(true);
-    }
-}
-
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel modelo = (DefaultTableModel) tablaPedidos.getModel();
-modelo.setRowCount(0); // limpia la tabla
-
-Connection con = ConexionBD.conectar();
-String sql = "SELECT nombre_cliente, direccion, descripcion FROM pedidos WHERE estado = 'pendiente'";
-
-try {
-    PreparedStatement ps = con.prepareStatement(sql);
-    ResultSet rs = ps.executeQuery();
-
-    while (rs.next()) {
-        String nombre = rs.getString("nombre_cliente");
-        String direccion = rs.getString("direccion");
-        String descripcion = rs.getString("descripcion");
-        modelo.addRow(new Object[]{nombre, direccion, descripcion});
-    }
-    con.close();
-} catch (SQLException e) {
-    JOptionPane.showMessageDialog(null, "Error al obtener pedidos: " + e.getMessage());
-}
-
-    
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-    String ubicacion = txtUbicacion.getText(); // Campo de texto donde el proveedor escribe su ubicación
-    String proveedorID = txtProveedorID.getText(); // El ID del proveedor para identificarlo en la BD
-
-    if (ubicacion.isEmpty() || proveedorID.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Por favor completa la ubicación y el ID del proveedor.");
-        return;
-    }
-
-    Connection con = ConexionBD.conectar();
-    String sql = "UPDATE proveedores SET ubicacion = ? WHERE id_proveedor = ?";
-
-    try {
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, ubicacion);
-        ps.setString(2, proveedorID);
-
-        int filasActualizadas = ps.executeUpdate();
-        if (filasActualizadas > 0) {
-            JOptionPane.showMessageDialog(null, "¡Ubicación actualizada correctamente!");
-        } else {
-            JOptionPane.showMessageDialog(null, "No se encontró el proveedor.");
-        }
-
-        con.close();
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Error al actualizar ubicación: " + e.getMessage());
-    }
-}
-
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -346,7 +215,7 @@ try {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
