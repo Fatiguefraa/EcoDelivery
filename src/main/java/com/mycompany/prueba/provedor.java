@@ -9,6 +9,10 @@ package com.mycompany.prueba;
  * @author david
  */
 public class provedor extends javax.swing.JFrame {
+private int idUsuario;
+
+
+
 
     /**
      * Creates new form provedor
@@ -94,11 +98,8 @@ public class provedor extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(249, 249, 249)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(235, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -107,6 +108,10 @@ public class provedor extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -156,22 +161,16 @@ public class provedor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Importar la clase
- Acciones_proveedores acciones = new Acciones_proveedores();
-    acciones.obtenerNotificaciones(idUsuario);
+        //Acciones_proveedores acciones = new Acciones_proveedores();
+          acciones.obtenerNotificaciones(idUsuario);
 }
-
 // TODO add your handling code here:
                                                         
-
     }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    Acciones_proveedores acciones = new Acciones_proveedores();
-    String nuevaLocacion = txtLocacion.getText(); // asegúrate de tener este JTextField
+       // Acciones_provedores acciones = new Acciones_provedores();
+    String nuevaLocacion = txtLocacion.getText(); // asegúrate que txtLocacion esté definido
     acciones.actualizarLocacion(nuevaLocacion, idUsuario);
-}
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

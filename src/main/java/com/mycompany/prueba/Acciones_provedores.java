@@ -8,8 +8,13 @@ package com.mycompany.prueba;
  *
  * @author david
  */
+
 import java.sql.*;
 public class Acciones_provedores {
+
+
+
+    //  Método privado para conectar con la base de datos
     private Connection conectar() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -20,7 +25,7 @@ public class Acciones_provedores {
         }
     }
 
-    // 🔔 Notificaciones
+    //  Notificaciones
     public void obtenerNotificaciones(int usuarioId) {
         try (Connection con = conectar()) {
             PreparedStatement ps = con.prepareStatement("SELECT mensaje FROM notificaciones WHERE usuario_id = ?");
@@ -34,7 +39,7 @@ public class Acciones_provedores {
         }
     }
 
-    // 📍 Locación
+    //  Locación
     public void actualizarLocacion(String nuevaLocacion, int usuarioId) {
         try (Connection con = conectar()) {
             PreparedStatement ps = con.prepareStatement("UPDATE usuarios SET locacion = ? WHERE id = ?");
@@ -47,7 +52,7 @@ public class Acciones_provedores {
         }
     }
 
-    // ⭐ Reseñas
+    // Reseñas
     public void guardarReseña(String textoReseña, int usuarioId) {
         try (Connection con = conectar()) {
             PreparedStatement ps = con.prepareStatement("INSERT INTO reseñas(contenido, usuario_id) VALUES (?, ?)");
@@ -60,7 +65,7 @@ public class Acciones_provedores {
         }
     }
 
-    // 📦 Pedidos pendientes
+    // Pedidos pendientes
     public void verPedidosPendientes(int usuarioId) {
         try (Connection con = conectar()) {
             PreparedStatement ps = con.prepareStatement("SELECT descripcion FROM pedidos WHERE estado = 'pendiente' AND usuario_id = ?");
@@ -73,7 +78,16 @@ public class Acciones_provedores {
             System.out.println("Error al obtener pedidos: " + e.getMessage());
         }
     }
+
+    //  Cerrar sesión
+    public void cerrarSesion(javax.swing.JFrame ventanaActual) {
+        if (ventanaActual != null) {
+            ventanaActual.dispose(); // cierra la ventana actual
+            System.out.println("✅ Sesión cerrada correctamente.");
+            // Si tienes pantalla de login:
+            // new LoginWindow().setVisible(true);
+        } else {
+            System.out.println("⚠️ No se pudo cerrar sesión: la ventana es nula.");
+        }
+    }
 }
-
-    
-
