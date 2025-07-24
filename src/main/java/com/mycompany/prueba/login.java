@@ -219,6 +219,11 @@ public class login extends javax.swing.JFrame {
        siginup MiPrincipal = new siginup();
        MiPrincipal.setVisible(true);
        MapaEmergencia.mostrarRuta("-34.6037,-58.3816", "-34.5736,-58.4223", "bicicleta");  
+        OSRMService.getRutaInfo(
+        -34.6037, -58.3816,  // Origen (lat, lon)
+        -34.5736, -58.4223,  // Destino
+        "bicicleta"          // Modo: "bicicleta" o "auto"
+    );
     }//GEN-LAST:event_forget_passwordMouseClicked
 
     /**
