@@ -83,6 +83,11 @@ private int idUsuario;
         jButton4.setBackground(new java.awt.Color(210, 228, 200));
         jButton4.setForeground(new java.awt.Color(0, 0, 153));
         jButton4.setText("Pedidos pendientes ");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(210, 228, 200));
         jButton5.setForeground(new java.awt.Color(0, 0, 255));
@@ -153,25 +158,124 @@ private int idUsuario;
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        String resena = JOptionPane.showInputDialog(null, "Escribe tu reseña:");
+
+    if (resena != null && !resena.trim().isEmpty()) {
+        if (idUsuario > 0) {
+            Acciones.guardarReseña(resena.trim(), idUsuario);
+            JOptionPane.showMessageDialog(null, "¡Reseña guardada con éxito!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Error: ID de usuario no válido.");
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "La reseña no puede estar vacía.");                              
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        int opcion = JOptionPane.showConfirmDialog(null, "¿Seguro que deseas cerrar sesión?", "Cerrar sesión", JOptionPane.YES_NO_OPTION);
+
+    if (opcion == JOptionPane.YES_OPTION) {
+        acciones.cerrarSesion(this); // Asegúrate de que 'this' es el JFrame activo.
+    }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //Acciones_proveedores acciones = new Acciones_proveedores();
-          acciones.obtenerNotificaciones(idUsuario);
-}
-// TODO add your handling code here:
-                                                        
+        if (idUsuario > 0) {
+        List<String> notificaciones = acciones.obtenerNotificaciones(idUsuario);
+
+        if (notificaciones != null && !notificaciones.isEmpty()) {
+            String mensaje = String.join("\n• ", notificaciones);
+            JOptionPane.showMessageDialog(null, "Notificaciones:\n• " + mensaje);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay notificaciones nuevas.");
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "ID de usuario no válido para obtener notificaciones.");                                                     
     }//GEN-LAST:event_jButton1ActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       // Acciones_provedores acciones = new Acciones_provedores();
-    String nuevaLocacion = txtLocacion.getText(); // asegúrate que txtLocacion esté definido
-    acciones.actualizarLocacion(nuevaLocacion, idUsuario);
+        String nuevaLocacion = txtLocacion.getText().trim();
+    if (nuevaLocacion.isEmpty()) {
+        JOptionPane.showMessageDialog(
+            null,
+            "Por favor escribe una locación.",
+            "Aviso",
+            JOptionPane.WARNING_MESSAGE
+        );
+        txtLocacion.requestFocus();
+        return;
+    }
+
+    if (idUsuario <= 0) {
+        JOptionPane.showMessageDialog(
+            null,
+            "ID de usuario no válido.",
+            "Error",
+            JOptionPane.ERROR_MESSAGE
+        );
+        return;
+    }
+
+    try {
+        boolean actualizada = acciones.actualizarLocacion(nuevaLocacion, idUsuario);
+
+        if (actualizada) {
+            JOptionPane.showMessageDialog(null, "Locación actualizada correctamente.");
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                "No se pudo actualizar la locación. Verifica los datos.",
+                "Aviso",
+                JOptionPane.WARNING_MESSAGE
+            );
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(
+            null,
+            "Error al actualizar la locación:\n" + e.getMessage(),
+            "Error",
+            JOptionPane.ERROR_MESSAGE
+        );
+        e.printStackTrace();
+    }                         
+    
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if (idUsuario <= 0) {
+        JOptionPane.showMessageDialog(
+            null,
+            "ID de usuario no válido.",
+            "Error",
+            JOptionPane.ERROR_MESSAGE
+        );
+        return;
+    }
+
+    try {
+        List<String> pedidos = acciones.verPedidosPendientes(idUsuario);
+
+        if (pedidos != null && !pedidos.isEmpty()) {
+            String mensaje = String.join("\n• ", pedidos);
+            JOptionPane.showMessageDialog(null, "Pedidos pendientes:\n• " + mensaje);
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                "No tienes pedidos pendientes.",
+                "Aviso",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(
+            null,
+            "Error al obtener los pedidos:\n" + e.getMessage(),
+            "Error",
+            JOptionPane.ERROR_MESSAGE
+        );
+        e.printStackTrace();
+    }
+}           
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,7 +304,7 @@ private int idUsuario;
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the form *
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new provedor().setVisible(true);
