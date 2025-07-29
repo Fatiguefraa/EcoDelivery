@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
 package com.mycompany.prueba;
+
+
 
 /**
  *
@@ -18,23 +21,91 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
 
     /**
      * Creates new form MENU
-     */¿
+     */
     public MENU() {
-        initComponents();
-         botonAlitas100Mas.addActionListener(e -> {
-            alitas100.incrementar();
-            actualizarTotal();
-        });
+    initComponents();
 
-        botonAlitas100Menos.addActionListener(e -> {
-            alitas100.decrementar();
-            actualizarTotal();
-        });
+    // Alitas 100g
+    btnMasAlitas100.addActionListener(e -> {
+        alitas100.incrementar();
+        actualizarTotalAlitas();
+    });
+    btnMenosAlitas100.addActionListener(e -> {
+        alitas100.decrementar();
+        actualizarTotalAlitas();
+    });
+
+    // Alitas 150g
+    btnMasAlitas150.addActionListener(e -> {
+        alitas150.incrementar();
+        actualizarTotalAlitas();
+    });
+    btnMenosAlitas150.addActionListener(e -> {
+        alitas150.decrementar();
+        actualizarTotalAlitas();
+    });
+
+    // Tacos 80g
+    btnMasTacos80.addActionListener(e -> {
+        tacos80.incrementar();
+        actualizarTotalTacos();
+    });
+    btnMenosTacos80.addActionListener(e -> {
+        tacos80.decrementar();
+        actualizarTotalTacos();
+    });
+
+    // Tacos 60g
+    btnMasTacos60.addActionListener(e -> {
+        tacos60.incrementar();
+        actualizarTotalTacos();
+    });
+    btnMenosTacos60.addActionListener(e -> {
+        tacos60.decrementar();
+        actualizarTotalTacos();
+    });
+
+    // Roll 180g
+    btnMasRoll180.addActionListener(e -> {
+        roll180.incrementar();
+        actualizarTotalRoll();
+    });
+    btnMenosRoll180.addActionListener(e -> {
+        roll180.decrementar();
+        actualizarTotalRoll();
+    });
+
+    // Roll 130g
+    btnMasRoll130.addActionListener(e -> {
+        roll130.incrementar();
+        actualizarTotalRoll();
+    });
+    btnMenosRoll130.addActionListener(e -> {
+        roll130.decrementar();
+        actualizarTotalRoll();
+    });
+}
+    public void actualizarTotalAlitas(){
+     int totalAlitas = alitas100.getSubtotal() + alitas150.getSubtotal();
+         totalAlitasLabel.setText("$" + totalAlitas);
+}
+    public void actualizarTotalTacos(){
+     int totalTacos = tacos80.getSubtotal() + tacos60.getSubtotal();
+         totalTacosLabel.setText("$" + totalTacos);
+}
+    public void actualizarTotalRoll(){
+     int totalRoll = roll180.getSubtotal() + roll130.getSubtotal();
+         totalRollLabel.setText("$" + totalRoll);
     }
-        public void actualizarTotal() {
-        int total = alitas100.getSubtotal() + tacos80.getSubtotal();
-        totalLabel.setText("$" + total);
-    }
+
+
+
+public static void main(String[] args) {
+     java.awt.EventQueue.invokeLater(() -> {
+        new MENU().setVisible(true);
+});
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,12 +126,12 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jLabel2 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
-        botonAlitas100Mas = new javax.swing.JButton();
-        botonAlitas100Menos = new javax.swing.JButton();
+        btnMenosAlitas150 = new javax.swing.JButton();
+        btnMasAlitas100 = new javax.swing.JButton();
+        btnMenosAlitas100 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton15 = new javax.swing.JButton();
+        btnMasAlitas150 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jTextField5 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
@@ -70,10 +141,10 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jLabel5 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        btnMasTacos80 = new javax.swing.JButton();
+        btnMenosTacos80 = new javax.swing.JButton();
+        btnMasTacos60 = new javax.swing.JButton();
+        btnMenosTacos60 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
@@ -83,10 +154,10 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jLabel8 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jButton19 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        btnMasRoll180 = new javax.swing.JButton();
+        btnMenosRoll180 = new javax.swing.JButton();
+        btnMasRoll130 = new javax.swing.JButton();
+        btnMenosRoll130 = new javax.swing.JButton();
         jPanel24 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
@@ -103,7 +174,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jButton25 = new javax.swing.JButton();
         jTextField19 = new javax.swing.JTextField();
         jTextField30 = new javax.swing.JTextField();
-        totalLabel = new javax.swing.JTextField();
+        totalAlitasLabel = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jTextField22 = new javax.swing.JTextField();
@@ -116,7 +187,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jTextField23 = new javax.swing.JTextField();
         jButton30 = new javax.swing.JButton();
         jTextField21 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
+        totalTacosLabel = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jTextField25 = new javax.swing.JTextField();
@@ -129,7 +200,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jButton28 = new javax.swing.JButton();
         jTextField29 = new javax.swing.JTextField();
         jTextField20 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
+        totalRollLabel = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -224,33 +295,33 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addContainerGap())
         );
 
-        jButton16.setBackground(new java.awt.Color(241, 230, 214));
-        jButton16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton16.setText("-");
-        jButton16.setBorder(null);
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosAlitas150.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosAlitas150.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosAlitas150.setText("-");
+        btnMenosAlitas150.setBorder(null);
+        btnMenosAlitas150.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                btnMenosAlitas150ActionPerformed(evt);
             }
         });
 
-        botonAlitas100Mas.setBackground(new java.awt.Color(241, 230, 214));
-        botonAlitas100Mas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        botonAlitas100Mas.setText("+");
-        botonAlitas100Mas.setBorder(null);
-        botonAlitas100Mas.addActionListener(new java.awt.event.ActionListener() {
+        btnMasAlitas100.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasAlitas100.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasAlitas100.setText("+");
+        btnMasAlitas100.setBorder(null);
+        btnMasAlitas100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAlitas100MasActionPerformed(evt);
+                btnMasAlitas100ActionPerformed(evt);
             }
         });
 
-        botonAlitas100Menos.setBackground(new java.awt.Color(241, 230, 214));
-        botonAlitas100Menos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        botonAlitas100Menos.setText("-");
-        botonAlitas100Menos.setBorder(null);
-        botonAlitas100Menos.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosAlitas100.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosAlitas100.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosAlitas100.setText("-");
+        btnMenosAlitas100.setBorder(null);
+        btnMenosAlitas100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAlitas100MenosActionPerformed(evt);
+                btnMenosAlitas100ActionPerformed(evt);
             }
         });
 
@@ -264,13 +335,13 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jTextField2.setText("$150");
         jTextField2.setBorder(null);
 
-        jButton15.setBackground(new java.awt.Color(241, 230, 214));
-        jButton15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton15.setText("+");
-        jButton15.setBorder(null);
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        btnMasAlitas150.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasAlitas150.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasAlitas150.setText("+");
+        btnMasAlitas150.setBorder(null);
+        btnMasAlitas150.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                btnMasAlitas150ActionPerformed(evt);
             }
         });
 
@@ -296,17 +367,17 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                         .addGap(26, 26, 26))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botonAlitas100Mas, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasAlitas100, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonAlitas100Menos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMenosAlitas100, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasAlitas150, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMenosAlitas150, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -325,12 +396,12 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                     .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton16)
-                    .addComponent(botonAlitas100Mas)
-                    .addComponent(botonAlitas100Menos)
+                    .addComponent(btnMenosAlitas150)
+                    .addComponent(btnMasAlitas100)
+                    .addComponent(btnMenosAlitas100)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15))
+                    .addComponent(btnMasAlitas150))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -412,43 +483,43 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton12.setBackground(new java.awt.Color(241, 230, 214));
-        jButton12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton12.setText("+");
-        jButton12.setBorder(null);
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnMasTacos80.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasTacos80.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasTacos80.setText("+");
+        btnMasTacos80.setBorder(null);
+        btnMasTacos80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnMasTacos80ActionPerformed(evt);
             }
         });
 
-        jButton14.setBackground(new java.awt.Color(241, 230, 214));
-        jButton14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton14.setText("-");
-        jButton14.setBorder(null);
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosTacos80.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosTacos80.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosTacos80.setText("-");
+        btnMenosTacos80.setBorder(null);
+        btnMenosTacos80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                btnMenosTacos80ActionPerformed(evt);
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(241, 230, 214));
-        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton13.setText("+");
-        jButton13.setBorder(null);
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        btnMasTacos60.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasTacos60.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasTacos60.setText("+");
+        btnMasTacos60.setBorder(null);
+        btnMasTacos60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                btnMasTacos60ActionPerformed(evt);
             }
         });
 
-        jButton11.setBackground(new java.awt.Color(241, 230, 214));
-        jButton11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton11.setText("-");
-        jButton11.setBorder(null);
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosTacos60.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosTacos60.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosTacos60.setText("-");
+        btnMenosTacos60.setBorder(null);
+        btnMenosTacos60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                btnMenosTacos60ActionPerformed(evt);
             }
         });
 
@@ -475,17 +546,17 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMasTacos80, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMenosTacos80, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMasTacos60, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnMenosTacos60, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -517,10 +588,10 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                     .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton14)
-                    .addComponent(jButton13)
-                    .addComponent(jButton11)
+                    .addComponent(btnMasTacos80)
+                    .addComponent(btnMenosTacos80)
+                    .addComponent(btnMasTacos60)
+                    .addComponent(btnMenosTacos60)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -582,43 +653,43 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton19.setBackground(new java.awt.Color(241, 230, 214));
-        jButton19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton19.setText("+");
-        jButton19.setBorder(null);
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        btnMasRoll180.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasRoll180.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasRoll180.setText("+");
+        btnMasRoll180.setBorder(null);
+        btnMasRoll180.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                btnMasRoll180ActionPerformed(evt);
             }
         });
 
-        jButton18.setBackground(new java.awt.Color(241, 230, 214));
-        jButton18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton18.setText("-");
-        jButton18.setBorder(null);
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosRoll180.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosRoll180.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosRoll180.setText("-");
+        btnMenosRoll180.setBorder(null);
+        btnMenosRoll180.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                btnMenosRoll180ActionPerformed(evt);
             }
         });
 
-        jButton17.setBackground(new java.awt.Color(241, 230, 214));
-        jButton17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton17.setText("+");
-        jButton17.setBorder(null);
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        btnMasRoll130.setBackground(new java.awt.Color(241, 230, 214));
+        btnMasRoll130.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMasRoll130.setText("+");
+        btnMasRoll130.setBorder(null);
+        btnMasRoll130.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                btnMasRoll130ActionPerformed(evt);
             }
         });
 
-        jButton20.setBackground(new java.awt.Color(241, 230, 214));
-        jButton20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton20.setText("-");
-        jButton20.setBorder(null);
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        btnMenosRoll130.setBackground(new java.awt.Color(241, 230, 214));
+        btnMenosRoll130.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenosRoll130.setText("-");
+        btnMenosRoll130.setBorder(null);
+        btnMenosRoll130.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                btnMenosRoll130ActionPerformed(evt);
             }
         });
 
@@ -677,18 +748,18 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                                 .addGap(17, 17, 17)
                                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMenosRoll130, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26))))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasRoll180, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMenosRoll180, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMasRoll130, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -703,8 +774,8 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                         .addGap(10, 10, 10)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton18)
-                            .addComponent(jButton17)
+                            .addComponent(btnMenosRoll180)
+                            .addComponent(btnMasRoll130)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24))
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -715,8 +786,8 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                         .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton20)
-                            .addComponent(jButton19))
+                            .addComponent(btnMenosRoll130)
+                            .addComponent(btnMasRoll180))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -847,9 +918,9 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jTextField30.setText("TOTAL");
         jTextField30.setBorder(null);
 
-        totalLabel.setBackground(new java.awt.Color(241, 230, 214));
-        totalLabel.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
-        totalLabel.setText("$0");
+        totalAlitasLabel.setBackground(new java.awt.Color(241, 230, 214));
+        totalAlitasLabel.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        totalAlitasLabel.setText("$0");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -872,7 +943,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                                 .addGap(68, 68, 68))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(totalAlitasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(89, 89, 89))))))
         );
@@ -890,7 +961,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(totalAlitasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1016,9 +1087,9 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jTextField21.setText("TOTAL");
         jTextField21.setBorder(null);
 
-        jTextField31.setBackground(new java.awt.Color(241, 230, 214));
-        jTextField31.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
-        jTextField31.setText("$0");
+        totalTacosLabel.setBackground(new java.awt.Color(241, 230, 214));
+        totalTacosLabel.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        totalTacosLabel.setText("$0");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1041,7 +1112,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                                 .addGap(69, 69, 69))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(totalTacosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(80, 80, 80))))))
         );
@@ -1059,7 +1130,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(totalTacosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -1190,9 +1261,9 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         jTextField20.setText("TOTAL");
         jTextField20.setBorder(null);
 
-        jTextField32.setBackground(new java.awt.Color(241, 230, 214));
-        jTextField32.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
-        jTextField32.setText("$0");
+        totalRollLabel.setBackground(new java.awt.Color(241, 230, 214));
+        totalRollLabel.setFont(new java.awt.Font("Calibri Light", 0, 18)); // NOI18N
+        totalRollLabel.setText("$0");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1212,7 +1283,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(totalRollLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(94, 94, 94))
         );
@@ -1230,7 +1301,7 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(totalRollLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1311,53 +1382,53 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField25ActionPerformed
 
-    private void botonAlitas100MasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlitas100MasActionPerformed
+    private void btnMasAlitas100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasAlitas100ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAlitas100MasActionPerformed
+    }//GEN-LAST:event_btnMasAlitas100ActionPerformed
 
-    private void botonAlitas100MenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlitas100MenosActionPerformed
+    private void btnMenosAlitas100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosAlitas100ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAlitas100MenosActionPerformed
+    }//GEN-LAST:event_btnMenosAlitas100ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void btnMenosTacos60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosTacos60ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_btnMenosTacos60ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void btnMasTacos80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasTacos80ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_btnMasTacos80ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void btnMasTacos60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasTacos60ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_btnMasTacos60ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void btnMenosTacos80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosTacos80ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_btnMenosTacos80ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void btnMasAlitas150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasAlitas150ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_btnMasAlitas150ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void btnMenosAlitas150ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosAlitas150ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_btnMenosAlitas150ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void btnMasRoll130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasRoll130ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_btnMasRoll130ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void btnMenosRoll180ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosRoll180ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_btnMenosRoll180ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void btnMasRoll180ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasRoll180ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_btnMasRoll180ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void btnMenosRoll130ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosRoll130ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_btnMenosRoll130ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -1405,19 +1476,19 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonAlitas100Mas;
-    private javax.swing.JButton botonAlitas100Menos;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
+    private javax.swing.JButton btnMasAlitas100;
+    private javax.swing.JButton btnMasAlitas150;
+    private javax.swing.JButton btnMasRoll130;
+    private javax.swing.JButton btnMasRoll180;
+    private javax.swing.JButton btnMasTacos60;
+    private javax.swing.JButton btnMasTacos80;
+    private javax.swing.JButton btnMenosAlitas100;
+    private javax.swing.JButton btnMenosAlitas150;
+    private javax.swing.JButton btnMenosRoll130;
+    private javax.swing.JButton btnMenosRoll180;
+    private javax.swing.JButton btnMenosTacos60;
+    private javax.swing.JButton btnMenosTacos80;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
@@ -1482,14 +1553,14 @@ ComboItem roll130 = new ComboItem(130, "Roll 130g");
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField totalLabel;
+    private javax.swing.JTextField totalAlitasLabel;
+    private javax.swing.JTextField totalRollLabel;
+    private javax.swing.JTextField totalTacosLabel;
     // End of variables declaration//GEN-END:variables
-}
+} 

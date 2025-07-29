@@ -125,17 +125,17 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonAlitas100Mas" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMasAlitas100" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField1" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="botonAlitas100Menos" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMenosAlitas100" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton15" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMasAlitas150" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField2" min="-2" pref="41" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton16" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMenosAlitas150" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -159,12 +159,12 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botonAlitas100Mas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botonAlitas100Menos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMenosAlitas150" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMasAlitas100" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMenosAlitas100" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMasAlitas150" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="21" max="32767" attributes="0"/>
                   </Group>
@@ -320,7 +320,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton16">
+            <Component class="javax.swing.JButton" name="btnMenosAlitas150">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -334,10 +334,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosAlitas150ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="botonAlitas100Mas">
+            <Component class="javax.swing.JButton" name="btnMasAlitas100">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -351,10 +351,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAlitas100MasActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasAlitas100ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="botonAlitas100Menos">
+            <Component class="javax.swing.JButton" name="btnMenosAlitas100">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -368,7 +368,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAlitas100MenosActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosAlitas100ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
@@ -399,7 +399,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton15">
+            <Component class="javax.swing.JButton" name="btnMasAlitas150">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -413,7 +413,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasAlitas150ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -432,17 +432,17 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton12" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="btnMasTacos80" min="-2" pref="31" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTextField3" min="-2" pref="34" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="jButton14" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="btnMenosTacos80" min="-2" pref="31" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton13" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="btnMasTacos60" min="-2" pref="31" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTextField7" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton11" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="btnMenosTacos60" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -486,10 +486,10 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton14" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMasTacos80" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMenosTacos80" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMasTacos60" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMenosTacos60" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -641,7 +641,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton12">
+            <Component class="javax.swing.JButton" name="btnMasTacos80">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -655,10 +655,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasTacos80ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton14">
+            <Component class="javax.swing.JButton" name="btnMenosTacos80">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -672,10 +672,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosTacos80ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton13">
+            <Component class="javax.swing.JButton" name="btnMasTacos60">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -689,10 +689,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasTacos60ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton11">
+            <Component class="javax.swing.JButton" name="btnMenosTacos60">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -706,7 +706,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosTacos60ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField3">
@@ -774,7 +774,7 @@
                                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                       <Component id="jTextField9" min="-2" pref="47" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jButton20" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="btnMenosRoll130" min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jTextField15" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -784,13 +784,13 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton19" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMasRoll180" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField8" min="-2" pref="48" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton18" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMenosRoll180" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton17" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnMasRoll130" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -807,8 +807,8 @@
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton18" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMenosRoll180" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMasRoll130" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -821,8 +821,8 @@
                               <Component id="jPanel23" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton20" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton19" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMenosRoll130" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMasRoll180" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -936,7 +936,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton19">
+            <Component class="javax.swing.JButton" name="btnMasRoll180">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -950,10 +950,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasRoll180ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton18">
+            <Component class="javax.swing.JButton" name="btnMenosRoll180">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -967,10 +967,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton18ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosRoll180ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton17">
+            <Component class="javax.swing.JButton" name="btnMasRoll130">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -984,10 +984,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton17ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMasRoll130ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton20">
+            <Component class="javax.swing.JButton" name="btnMenosRoll130">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -1001,7 +1001,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton20ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenosRoll130ActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel24">
@@ -1102,7 +1102,7 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="totalLabel" min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Component id="totalAlitasLabel" min="-2" pref="77" max="-2" attributes="0"/>
                                           <Component id="jTextField30" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
@@ -1127,7 +1127,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField30" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="totalLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="totalAlitasLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1351,7 +1351,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="totalLabel">
+            <Component class="javax.swing.JTextField" name="totalAlitasLabel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -1394,7 +1394,7 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jTextField31" min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Component id="totalTacosLabel" min="-2" pref="77" max="-2" attributes="0"/>
                                           <Component id="jTextField21" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
@@ -1419,7 +1419,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField21" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField31" min="-2" max="-2" attributes="0"/>
+                      <Component id="totalTacosLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="32" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1640,7 +1640,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField31">
+            <Component class="javax.swing.JTextField" name="totalTacosLabel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
@@ -1680,7 +1680,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jTextField32" min="-2" pref="77" max="-2" attributes="0"/>
+                          <Component id="totalRollLabel" min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="jTextField20" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
@@ -1701,7 +1701,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField20" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField32" min="-2" max="-2" attributes="0"/>
+                      <Component id="totalRollLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1925,7 +1925,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField32">
+            <Component class="javax.swing.JTextField" name="totalRollLabel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d6" green="e6" red="f1" type="rgb"/>
