@@ -27,5 +27,10 @@
           <artifactId>jfreechart</artifactId>
           <version>1.5.4</version>
         </dependency>
+        <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20231013</version> <!-- Última versión estable -->
+        </dependency>
     </dependencies> 
 </project>
